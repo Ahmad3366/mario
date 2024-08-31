@@ -1,5 +1,5 @@
-import kaboom from "kaboom";
-import 'kaboom/global';
+import kaplay from "kaplay";
+import 'kaplay/global';
 
 import loadAssets from "./utils/loader";
 import { makePlayer } from "./entites/player";
@@ -9,7 +9,7 @@ import { addWin } from "./entites/win";
 import { addGoomba } from "./entites/goomba";
 import { soundSys } from "./utils/SoundSys";
 
-kaboom({
+kaplay({
 	logMax: 1
 })
 
