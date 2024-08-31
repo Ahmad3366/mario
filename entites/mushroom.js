@@ -14,6 +14,7 @@ export function addMushroom(obj) {
 
 				this.onCollide('player', (p) => {
 					destroy(this)
+					play('powerup')
 					p.biggify()
 				})
 			},

@@ -47,6 +47,7 @@ export function makePlayer(posi) {
 					onKeyPress('up', () => {
 						if (this.isGrounded()) {
 							this.jump(this.playerJumpForce)
+							play('jump')
 						}
 					})
 				)

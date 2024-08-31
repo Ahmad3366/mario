@@ -1,3 +1,5 @@
+import { soundSys } from "../utils/SoundSys"
+
 export function addWin (o) {
 	add([
 		sprite('castle'),
@@ -9,6 +11,8 @@ export function addWin (o) {
 				this.onCollide('player', (player) => {
 					player.disableMovment()
 					player.fadeO()
+					soundSys.stopSound('theme')
+					soundSys.playSound('stage_clear')
 				})
 			}
 		}

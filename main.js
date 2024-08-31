@@ -7,17 +7,20 @@ import { colorizeBg, drawCollisions, drawTiles, fetchMapData } from "./utils/uti
 import { setCamera } from "./utils/camera";
 import { addWin } from "./entites/win";
 import { addGoomba } from "./entites/goomba";
+import { soundSys } from "./utils/SoundSys";
 
 kaboom({
 	logMax: 1
 })
 
 loadAssets()
+soundSys.initSounds()
 
 setGravity(2000)
 
 async function main() {
 	colorizeBg('#35B6EB')
+	soundSys.playSound('theme')
 
 	const mapData = await fetchMapData('./maps/map.json')
 	const layers = mapData.layers

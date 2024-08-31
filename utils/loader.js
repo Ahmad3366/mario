@@ -1,5 +1,5 @@
 export default function loadAssets() {
-  loadRoot('./assets/')
+  loadRoot('../assets/')
 
   loadSprite('castle', 'Castle.png')
   loadSprite('mario', 'Mario.png', {
@@ -53,4 +53,11 @@ export default function loadAssets() {
 			height: 16
 		}
 	})
+
+	loadRoot('../sounds/')
+	loadSound('jump', 'jump-small.wav')
+	loadSound('powerup', 'powerup.wav')
+	loadSound('stomp', 'stomp.wav')
+	loadSound('stage_clear', 'stage_clear.wav')
+	loadSound('theme', 'Theme.mp3')
 }

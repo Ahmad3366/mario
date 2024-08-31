@@ -33,6 +33,7 @@ export function addGoomba(o) {
 				this.onCollide('player', (p, col) => {
 					if (col.isTop()) {
 						this.play('death')
+						play('stomp')
 						p.jump(260)
 						for (const h of this.hand) {
 							h.cancel()
