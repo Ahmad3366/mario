@@ -61,6 +61,17 @@ async function main() {
 	camScale(3)
 }
 
-main()
+scene('main', main)
+scene('intro', () => {
+	colorizeBg('#35B6EB')
+	add([
+		text('press [Enter] to start !', {size: 50}),
+		anchor('center'),
+		pos(center())
+	])
+	onKeyPress('enter', () => go('main'))
+})
+
+go('intro')
 
 // debug.inspect = true
