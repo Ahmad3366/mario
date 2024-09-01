@@ -45,6 +45,20 @@ export default function loadAssets() {
 		sliceX: 8,
 		sliceY: 8
 	})
+	loadSpriteAtlas('OverWorld.png', {
+		'mystery': {
+			x: 64,
+			y: 0,
+			width: 16,
+			height: 16
+		},
+		'empty': {
+			x: 32,
+			y: 0,
+			width: 16,
+			height: 16
+		},
+	})
 	loadSpriteAtlas('Items.png', {
 		'mushroom': {
 			x: 0,

@@ -48,6 +48,19 @@ async function main() {
 					const goomba = addGoomba(o)
 					goomba.patrol()
 				}
+				if (o.name == 'mystery') {
+					add([
+						sprite('mystery'),
+						pos(o.x, o.y + 16),
+						area(),
+						body({isStatic: true}),
+						offscreen({hide: true}),
+						{
+							properties: o.properties
+						},
+						'mystery'
+					])
+				}
 				
 			}
 			continue

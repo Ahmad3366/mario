@@ -118,6 +118,7 @@ export function makePlayer(posi) {
 				this.onHeadbutt((obj) => {
 					if (obj.is('mystery') && !obj.properties[0].value) {
 
+						obj.use(sprite('empty'))
 						const m = addMushroom(obj)
 						m.patrol()
 
