@@ -8,6 +8,7 @@ import { setCamera } from "./utils/camera";
 import { addWin } from "./entites/win";
 import { addGoomba } from "./entites/goomba";
 import { soundSys } from "./utils/SoundSys";
+import { addCoin } from "./entites/coin";
 
 kaplay({
 	logMax: 1
@@ -60,6 +61,9 @@ async function main() {
 						},
 						'mystery'
 					])
+				}
+				if (o.name == 'coin') {
+					addCoin(o)
 				}
 				
 			}

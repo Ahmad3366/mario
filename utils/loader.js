@@ -65,6 +65,17 @@ export default function loadAssets() {
 			y: 0,
 			width: 16,
 			height: 16
+		},
+		'coin': {
+			x: 0,
+			y: 16,
+			width: 64,
+			height: 32,
+			sliceX: 4,
+			sliceY: 2,
+			anims: {
+				spin: {from: 0, to: 7, loop: true}
+			}
 		}
 	})
 
@@ -72,6 +83,7 @@ export default function loadAssets() {
 	loadSound('jump', 'jump-small.wav')
 	loadSound('powerup', 'powerup.wav')
 	loadSound('stomp', 'stomp.wav')
+	loadSound('coin', 'coin.wav')
 	loadSound('stage_clear', 'stage_clear.wav')
 	loadSound('theme', 'Theme.mp3')
 }
